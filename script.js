@@ -1,5 +1,20 @@
 function stringChop(str, size) {
-  // your code here
+  // If string is null, return empty array
+  if (str === null) {
+    return [];
+  }
+
+  // Convert size to number
+  size = Number(size);
+
+  let result = [];
+
+  // Loop through string in steps of size
+  for (let i = 0; i < str.length; i += size) {
+    result.push(str.slice(i, i + size));
+  }
+
+  return result;
 }
 
 // Do not change the code below
